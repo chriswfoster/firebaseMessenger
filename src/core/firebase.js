@@ -36,7 +36,7 @@ firebase.initializeApp(firebaseConfig);
 const messaging = getMessaging();
 
 export const getTheToken = (setTokenFound) => {
-    getToken(messaging, {vapidKey: process.env.REACT_APP_vap_id_key}).then((currentToken) => {
+    getToken(messaging, {vapidKey: process.env.REACT_APP_vap_id_key,topic: 'test'}).then((currentToken) => {
       if (currentToken) {
         console.log('current token for client: ', currentToken);
         setTokenFound(true);
