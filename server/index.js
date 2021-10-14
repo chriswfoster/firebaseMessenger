@@ -30,15 +30,13 @@ const message = {
 setTimeout(() => {
     admin.messaging().send(message)
     .then((response) => {
-      // Response is a message ID string.
+
       console.log('Successfully sent message:', response);
     })
     .catch((error) => {
       console.log('Error sending message:', error);
     });
 }, 1000)
-
-
 
 app.listen(port, () => {
     console.log('Listening on port: ', port);
